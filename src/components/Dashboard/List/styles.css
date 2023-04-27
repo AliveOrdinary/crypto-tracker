@@ -1,0 +1,36 @@
+.list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.list-row:hover {
+  background-color: var(--darkgrey);
+}
+
+.list-row td {
+  text-align: left;
+  width: 18%;
+}
+
+.list-img {
+  width: 3rem !important;
+  margin-right: 2rem;
+}
+
+.td-right-align {
+  text-align: right;
+}
+.td-center-align {
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .td-icon {
+    display: none;
+  }
+}
