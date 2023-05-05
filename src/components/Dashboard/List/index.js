@@ -3,6 +3,7 @@ import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import "./styles.css";
 import { Tooltip } from "@mui/material";
+import { convertNumbers } from "../../../functions/convertNumbers";
 const List = ({ coin }) => {
   return (
     <tr className="list-row">
@@ -53,15 +54,22 @@ const List = ({ coin }) => {
       </td>
       <td>
         <Tooltip title="Total volume">
-          <p className="total-volume td-right-align">
+          <p className="total-volume td-right-align td-total-volume">
             {coin.total_volume.toLocaleString()}
           </p>
         </Tooltip>
       </td>
-      <td>
+      <td className="desktop-td-mkt">
         <Tooltip title="Market cap">
           <p className="total-volume td-right-align">
             ${coin.market_cap.toLocaleString()}
+          </p>
+        </Tooltip>
+      </td>
+      <td className="mobile-td-mkt">
+        <Tooltip title="Market cap">
+          <p className="total-volume td-right-align">
+            ${convertNumbers(coin.market_cap)}
           </p>
         </Tooltip>
       </td>
