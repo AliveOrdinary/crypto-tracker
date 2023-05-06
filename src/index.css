@@ -50,3 +50,13 @@ a {
   color: var(--white);
   text-decoration: none;
 }
+
+.grey-wrapper {
+  display: block;
+  width: 90%;
+  background-color: var(--darkgrey);
+  margin: 1.5rem auto;
+  border-radius: 0.8rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}

@@ -21,11 +21,7 @@ const Header = () => {
           <p className="link">Watchlist</p>
         </Link>
         <Link to="/dashboard">
-          <Button
-            text="Dashboard"
-            onClick={() => console.log("Btn Clicked")}
-            outlined={true}
-          />
+          <Button text="Dashboard" onClick={() => console.log("Btn Clicked")} />
         </Link>
       </div>
       <div className="mobile-drawer">
