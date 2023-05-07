@@ -22,7 +22,7 @@ const List = ({ coin }) => {
           {coin.price_change_percentage_24h > 0 ? (
             <td className="chip-container">
               <div className="price-chip">
-                {coin.price_change_percentage_24h.toFixed(2)}%
+                {coin.price_change_percentage_24h?.toFixed(2)}%
               </div>
               <div className="price-icon td-icon">
                 <TrendingUpRoundedIcon />
@@ -31,7 +31,7 @@ const List = ({ coin }) => {
           ) : (
             <td className="chip-container">
               <div className="price-chip red-chip">
-                {coin.price_change_percentage_24h.toFixed(2)}%
+                {coin.price_change_percentage_24h?.toFixed(2)}%
               </div>
               <div className="price-icon red-chip td-icon">
                 <TrendingDownRoundedIcon />
@@ -50,21 +50,21 @@ const List = ({ coin }) => {
                     : "var(--green)",
               }}
             >
-              ${coin.current_price.toLocaleString()}
+              ${coin.current_price?.toLocaleString()}
             </h3>
           </Tooltip>
         </td>
         <td>
           <Tooltip title="Total volume">
             <p className="total-volume td-right-align td-total-volume">
-              {coin.total_volume.toLocaleString()}
+              {coin.total_volume?.toLocaleString()}
             </p>
           </Tooltip>
         </td>
         <td className="desktop-td-mkt">
           <Tooltip title="Market cap">
             <p className="total-volume td-right-align">
-              ${coin.market_cap.toLocaleString()}
+              ${coin.market_cap?.toLocaleString()}
             </p>
           </Tooltip>
         </td>

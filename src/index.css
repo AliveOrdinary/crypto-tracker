@@ -60,3 +60,11 @@ a {
   padding: 1rem;
   box-sizing: border-box;
 }
+
+.coins-days-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem;
+  gap: 2rem;
+}

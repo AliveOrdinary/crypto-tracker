@@ -31,18 +31,19 @@ const CoinPage = () => {
     if (data) {
       coinObject(setCoinData, data);
       const prices = await getCoinPrices(id, days, priceType);
-      if (prices) {
-        settingChartData(prices, setChartData);
+      if (prices.length > 0) {
+        settingChartData(setChartData, prices);
         setIsLoading(false);
       }
     }
   }
-  const handleDaysChange = async (e) => {
+
+  const handleDaysChange = async (event) => {
     setIsLoading(true);
-    setDays(e.target.value);
-    const prices = await getCoinPrices(id, e.target.value, priceType);
-    if (prices) {
-      settingChartData(prices, setChartData);
+    setDays(event.target.value);
+    const prices = await getCoinPrices(id, event.target.value, priceType);
+    if (prices.length > 0) {
+      settingChartData(setChartData, prices);
       setIsLoading(false);
     }
   };
@@ -51,8 +52,8 @@ const CoinPage = () => {
     setIsLoading(true);
     setPriceType(newType);
     const prices = await getCoinPrices(id, days, newType);
-    if (prices) {
-      settingChartData(prices, setChartData);
+    if (prices.length > 0) {
+      settingChartData(setChartData, prices);
       setIsLoading(false);
     }
   };
