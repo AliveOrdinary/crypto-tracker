@@ -7,6 +7,7 @@ import { ThemeProvider, createTheme } from "@mui/material";
 import Grid from "../Grid";
 import "./styles.css";
 import List from "../List";
+import Button from "../../Common/Button";
 
 export default function TabsComponent({ coins }) {
   const [value, setValue] = useState("grid");
